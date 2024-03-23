@@ -2,8 +2,8 @@
 spec:
   structures:
     - content_blocks
-  label: "Form"
-  description: A CloudCannon form with a heading
+  label: "PayPal"
+  description: PayPal Buttons
   icon: dynamic_form
   tags: ['form']
 

@@ -1,13 +1,13 @@
-nav_logo_image: /assets/uploads/venture-logo.svg
-logo_text: Venture
+nav_logo_image: /assets/images/makerspace/makerspace.png
+logo_text: Staunton Makerspace
 navigation_items:
-  - label: Our Services
-    link_url: /#services
-    open_in_new_tab: false
-  - label: Book Now
-    link_url: /booking
+  - label: Get Started
+    link_url: /get_started
     open_in_new_tab: false
   - label: Contact Us
     link_url: /contact
+    open_in_new_tab: false
+  - label: Makerspace Wiki
+    link_url: https://wiki.stauntonmakerspace.org
     open_in_new_tab: false
 nav_color_group: secondary0

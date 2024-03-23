@@ -1,0 +1,101 @@
+{%  assign_local c = 'c-simple-text-block' %}
+
+
+<section {% if content.id %}id="{{ content.id }}"{% endif %} class='{{c}} component component--{{ styles.color_group }}'>
+
+    <div class='{{c}}__content'>
+        {% bookshop "generic/heading" bind:content.heading %}
+        {% if content.text %}{% bookshop "generic/text-block" bind:content.text %}{% endif %}
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="SL44L7QPZZJDG" />
+  <table>
+    <tr>
+      <td>
+        <input type="hidden" name="on0" value="Monthy Membership"/>
+        Monthy Membership
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <select name="os0">
+          <option value="Member">
+            Member $75.00 USD - month(s)
+          </option>
+          <option value="Family">
+            Family $90.00 USD - month(s)
+          </option>
+          <option value="Supporter">
+            Supporter $25.00 USD - month(s)
+          </option>
+        </select>
+      </td>
+    </tr>
+  </table>
+  <input type="hidden" name="currency_code" value="USD" />
+  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Subscribe" />
+</form>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="BF59FSAKJQ6DC" />
+  <table>
+    <tr>
+      <td>
+        <input type="hidden" name="on0" value="Yearly Membership"/>
+        Yearly Membership
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <select name="os0">
+          <option value="Member">
+            Member $810.00 USD - year(s)
+          </option>
+          <option value="Family">
+            Family $972.00 USD - year(s)
+          </option>
+        </select>
+      </td>
+    </tr>
+  </table>
+  <input type="hidden" name="currency_code" value="USD" />
+  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Subscribe" />
+</form>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="NE768T9EU8BBY" />
+  <table>
+    <tr>
+      <td>
+        <input type="hidden" name="on0" value="Floor Space"/>
+        Floor Space
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <select name="os0">
+          <option value="Project Cart (2x2)">
+            Project Cart (2x2) $16.00 USD - month(s)
+          </option>
+          <option value="Work Table (2x4)">
+            Work Table (2x4) $32.00 USD - month(s)
+          </option>
+          <option value="Loft Cubby (3x4)">
+            Loft Cubby (3x4) $12.00 USD - month(s)
+          </option>
+          <option value="Loft Area (6x6)">
+            Loft Area (6x6) $48.00 USD - month(s)
+          </option>
+        </select>
+      </td>
+    </tr>
+  </table>
+  <input type="hidden" name="currency_code" value="USD" />
+  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Subscribe" />
+</form>
+
+</div>
+</section>
