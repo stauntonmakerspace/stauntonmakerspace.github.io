@@ -28,7 +28,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
     "last_opened_file_path": "/home/dan/projects/github/makerspace/stauntonmakerspace.github.io/src/pages",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -56,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711208380382</updated>
-      <workItem from="1711208381420" duration="20523000" />
+      <workItem from="1711208381420" duration="24647000" />
     </task>
     <servers />
   </component>
