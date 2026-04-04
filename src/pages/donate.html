@@ -1,0 +1,107 @@
+---
+_schema: default
+draft: false
+title: Donate
+page_description: Support the Staunton Makerspace with a tax-deductible donation
+featured_image:
+  image_path:
+  image_alt:
+layout: layouts/page.html
+permalink: /donate/
+eleventyExcludeFromCollections: false
+hero:
+  _bookshop_name: sections/hero--simple
+  content:
+    heading:
+      _bookshop_name: generic/heading
+      eyebrow_headline: ""
+      primary_heading: ""
+      eyebrow_headline_hierarchy: h3
+      primary_heading_hierarchy: h1
+    description: ''
+  styles:
+    color_group: primary
+content_blocks:
+---
+
+<section class="donate-hero component component--primary">
+  <video class="donate-hero__video" autoplay muted loop playsinline>
+    <source src="/assets/images/volunteer.mov" type="video/mp4">
+  </video>
+  <div class="donate-hero__overlay"></div>
+  <div class="donate-hero__content">
+    <h2 class="c-heading__eyebrow_heading">Support Our Mission</h2>
+    <h1 class="c-heading__primary_heading">Make a Donation</h1>
+    <p>Your donation provides tools and space for a local community of dreamers, builders, and problem-solvers of all ages.</p>
+  </div>
+</section>
+
+<section class="component component--secondary0">
+  <div class="donate-form">
+    <p class="donate-form__description">
+      The Staunton Makerspace is a 501(c)(3) nonprofit. Your donation is tax-deductible.
+    </p>
+
+    <div class="donate-form__layout">
+      <div class="donate-form__controls">
+        <div class="donate-form__section">
+          <span class="donate-form__label">Frequency</span>
+          <div class="frequency-toggle">
+            <button type="button" class="frequency-toggle__option frequency-toggle__option--active" data-frequency="one-time">One-time</button>
+            <button type="button" class="frequency-toggle__option" data-frequency="monthly">Monthly</button>
+            <button type="button" class="frequency-toggle__option" data-frequency="yearly">Yearly</button>
+          </div>
+        </div>
+
+        <div class="donate-form__section">
+          <span class="donate-form__label">Amount</span>
+          <div class="amount-grid">
+            <button type="button" class="amount-grid__option" data-amount="25">$25</button>
+            <button type="button" class="amount-grid__option amount-grid__option--active" data-amount="50">$50</button>
+            <button type="button" class="amount-grid__option" data-amount="100">$100</button>
+          </div>
+          <div class="custom-amount">
+            <span class="custom-amount__symbol">$</span>
+            <input type="number" class="custom-amount__input" placeholder="Other amount" min="1" step="1">
+          </div>
+        </div>
+
+        <div class="donate-form__section">
+          <div class="gift-option gift-option--visible">
+            <label class="gift-option__checkbox">
+              <input type="checkbox" class="gift-option__input">
+              <div class="gift-option__text">
+                Send me a <strong>Wood Jam</strong> as a thank-you gift!
+                <div class="gift-option__note">Available for donations of $50 or more. PayPal will collect your shipping address.</div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="donate-form__section">
+          <div id="paypal-button-container" class="donate-form__paypal"></div>
+        </div>
+
+        <div class="donate-form__message"></div>
+      </div>
+
+      <div class="donate-form__gift-preview">
+        <div class="gift-preview">
+          <img src="/assets/images/woodjam_small.jpg" alt="Staunton Makerspace Wood Jam" class="gift-preview__image">
+          <strong class="gift-preview__title">Staunton Makerspace Wood Jam</strong>
+          <p class="gift-preview__description">Our team of scientists paused work on their warp drive, artists set aside their embroidery, and the metal workers dropped their swords as our makerspace came together in support of our woodworkers, who faced crippling fees to purchase good hard wax wood oil finishes. This simple jam jar contains a careful mixture of natural food-safe waxes and oils designed by professional chemists and is trusted by skilled artisans and craftsmen — it is an excellent finish for all wood surfaces.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if paypal.clientId != '' %}
+<script src="https://www.paypal.com/sdk/js?client-id={{ paypal.clientId }}&currency=USD&intent=capture" data-sdk-integration-source="button-factory"></script>
+{% endif %}
+<script>
+  window.__DONATE_CONFIG__ = {
+    slackWebhookUrl: "{{ paypal.slackWebhookUrl }}"
+  };
+</script>
+<script src="/assets/js/donate.js" defer></script>

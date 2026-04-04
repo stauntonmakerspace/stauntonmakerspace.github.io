@@ -27,11 +27,9 @@
 
                     <ul class="{{ c }}__navlist">
                         <li>
-                        <form action="https://www.paypal.com/donate" method="post" target="_top">
-                            <input type="hidden" name="hosted_button_id" value="6EBCJYR63N5BC" />
-                            <input type="image" src="/assets/images/makerspace/donate.png" border="0" name="submit" title="Donate to the Makerspace" alt="Donate" />
-                            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-                        </form>
+                            <a href="/donate/" title="Donate to the Makerspace">
+                                <img src="/assets/images/makerspace/donate.png" alt="Donate" />
+                            </a>
                         </li>
 
                         {% for navitem in nav.navigation_items %}
@@ -54,11 +52,9 @@
                 <div class="{{c}}__navlist--overflow">
                     <ul class="{{ c }}__navlist">
                         <li>
-                            <form action="https://www.paypal.com/donate" method="post" target="_top">
-                                <input type="hidden" name="hosted_button_id" value="6EBCJYR63N5BC" />
-                                <input type="image" src="/assets/images/makerspace/donate.png" border="0" name="submit" title="Donate to the Makerspace" alt="Donate" />
-                                <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-                            </form>
+                            <a href="/donate/" title="Donate to the Makerspace">
+                                <img src="/assets/images/makerspace/donate.png" alt="Donate" />
+                            </a>
                         </li>
 
                         {% for navitem in nav.navigation_items %}

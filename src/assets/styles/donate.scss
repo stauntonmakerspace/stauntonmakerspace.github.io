@@ -1,0 +1,299 @@
+/* Hide the empty bookshop hero on the donate page */
+main:has(.donate-hero) > .c-hero--simple {
+  display: none;
+  padding: 0;
+}
+
+.donate-hero {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 50vh;
+  overflow: hidden;
+
+  &.component {
+    padding: 0;
+  }
+
+  &__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--main-background-color, #3b3b3d);
+    opacity: 0.5;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: var(--gap-extra-large) var(--gap-large);
+    max-width: 600px;
+
+    .c-heading__primary_heading {
+      text-wrap: pretty;
+    }
+
+    p {
+      font-size: var(--paragraph-large);
+      text-wrap: balance;
+      margin-top: var(--gap-normal);
+      opacity: 0.9;
+    }
+  }
+}
+
+.donate-form {
+  padding: var(--gap-extra-large) var(--gap-large);
+
+  &__section {
+    margin-bottom: var(--gap-large);
+  }
+
+  &__label {
+    display: block;
+    font-size: var(--paragraph);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--gap-small);
+  }
+
+  &__layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-extra-large);
+    max-width: 420px;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: start;
+      justify-content: center;
+      max-width: none;
+    }
+  }
+
+  &__controls {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  &__gift-preview {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}
+
+.gift-preview {
+  border: 2px solid var(--main-text-color, #f9f9fb);
+  border-radius: 6px;
+  padding: var(--gap-large);
+  text-align: center;
+
+  &__image {
+    width: 140px;
+    border-radius: 6px;
+    margin-bottom: var(--gap-normal);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__title {
+    display: block;
+    font-size: var(--heading-small);
+    margin-bottom: var(--gap-normal);
+  }
+
+  &__description {
+    font-size: var(--paragraph-small);
+    line-height: 1.7;
+    opacity: 0.85;
+    text-align: left;
+  }
+}
+
+.frequency-toggle {
+  display: flex;
+  border: 2px solid var(--main-text-color, #f9f9fb);
+  border-radius: 6px;
+  overflow: hidden;
+
+  &__option {
+    flex: 1;
+    padding: 12px 16px;
+    background: transparent;
+    color: var(--main-text-color, #f9f9fb);
+    border: none;
+    font-family: var(--content-font);
+    font-size: var(--paragraph);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.15s, color 0.15s;
+
+    &:not(:last-child) {
+      border-right: 2px solid var(--main-text-color, #f9f9fb);
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    &--active {
+      background: var(--main-text-color, #f9f9fb);
+      color: var(--main-background-color, #3b3b3d);
+
+      &:hover {
+        background: var(--main-text-color, #f9f9fb);
+      }
+    }
+  }
+}
+
+.amount-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-small);
+  margin-bottom: var(--gap-small);
+
+  &__option {
+    padding: 14px 8px;
+    background: transparent;
+    color: var(--main-text-color, #f9f9fb);
+    border: 2px solid var(--main-text-color, #f9f9fb);
+    border-radius: 6px;
+    font-family: var(--content-font);
+    font-size: var(--heading-small);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.15s, color 0.15s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    &--active {
+      background: var(--main-text-color, #f9f9fb);
+      color: var(--main-background-color, #3b3b3d);
+    }
+  }
+}
+
+.custom-amount {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--main-text-color, #f9f9fb);
+  border-radius: 6px;
+  overflow: hidden;
+
+  &__symbol {
+    padding: 12px 14px;
+    font-size: var(--heading-small);
+    font-weight: var(--font-weight-bold);
+    color: var(--main-text-color, #f9f9fb);
+    background: transparent;
+    border-right: 2px solid var(--main-text-color, #f9f9fb);
+  }
+
+  &__input {
+    flex: 1;
+    padding: 12px 14px;
+    background: transparent;
+    color: var(--main-text-color, #f9f9fb);
+    border: none;
+    font-family: var(--content-font);
+    font-size: var(--heading-small);
+    font-weight: var(--font-weight-bold);
+    outline: none;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
+.gift-option {
+  display: none;
+  padding: var(--gap-normal);
+  border: 2px solid var(--main-text-color, #f9f9fb);
+  border-radius: 6px;
+
+  &--visible {
+    display: block;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--gap-normal);
+    cursor: pointer;
+  }
+
+  &__input {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    accent-color: var(--main-text-color, #f9f9fb);
+  }
+
+  &__text {
+    font-size: var(--paragraph);
+    line-height: 1.5;
+  }
+
+  &__note {
+    font-size: var(--paragraph-small);
+    opacity: 0.7;
+    margin-top: 4px;
+  }
+}
+
+.donate-form__paypal {
+  min-height: 55px;
+}
+
+.donate-form__message {
+  text-align: center;
+  padding: var(--gap-normal);
+  border-radius: 6px;
+  font-size: var(--paragraph);
+  display: none;
+
+  &--success {
+    display: block;
+    background: rgba(34, 197, 94, 0.15);
+    color: #86efac;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+  }
+
+  &--error {
+    display: block;
+    background: rgba(239, 68, 68, 0.15);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+}
+
+.donate-form__description {
+  text-align: center;
+  font-size: var(--paragraph);
+  opacity: 0.8;
+  line-height: 1.6;
+  margin-bottom: var(--gap-large);
+}
