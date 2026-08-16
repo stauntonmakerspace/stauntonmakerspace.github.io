@@ -4,6 +4,9 @@ navigation_items:
   - label: Get Started
     link_url: /get_started
     open_in_new_tab: false
+  - label: Videos
+    link_url: /videos
+    open_in_new_tab: false
   - label: Contact Us
     link_url: /contact
     open_in_new_tab: false
