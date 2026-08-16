@@ -1,3 +1,15 @@
 .c-left-right-block--testimonial {
   $c: &;
+
+  .c-heading__primary_heading,
+  .c-text-block {
+    transition: opacity 0.4s ease;
+  }
+
+  &--fading {
+    .c-heading__primary_heading,
+    .c-text-block {
+      opacity: 0;
+    }
+  }
 }

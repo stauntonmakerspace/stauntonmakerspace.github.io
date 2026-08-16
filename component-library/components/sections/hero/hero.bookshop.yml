@@ -14,6 +14,7 @@ blueprint:
     description: Description text to compliment the block
     button: bookshop:generic/button!
     image: bookshop:generic/image
+    video: bookshop:generic/video
   styles:
     image_alignment: left
     color_group: "primary"
@@ -46,6 +47,8 @@ preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
+  video:
+    comment: "If provided, this video is used instead of the image, in the position/alignment set below."
   image_alignment:
     comment: "If an image is provided, determines how the image will display: on the left, the right, or covering the full background of the hero"
     type: choice

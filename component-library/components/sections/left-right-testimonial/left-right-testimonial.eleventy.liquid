@@ -2,11 +2,18 @@
 
 {% capture heading %}
   eyebrow_headline: {{ content.eyebrow_headline }}
-  primary_heading: "&ldquo;{{ content.quote }}&rdquo;"
+  primary_heading: "&ldquo;{{ content.quotes[0].quote }}&rdquo;"
 {% endcapture %}
 {% assign_local heading = heading | ymlify %}
 
 
 <section {% if content.id %}id="{{ content.id }}"{% endif %} class="{{ c }}">
-  {% bookshop "generic/left-right-block" heading:heading buttons:content.buttons text:content.author_name image:content.image image_alignment:styles.image_alignment color_group:styles.color_group %}
+  {% bookshop "generic/left-right-block" heading:heading buttons:content.buttons text:content.quotes[0].author_name image:content.image image_alignment:styles.image_alignment color_group:styles.color_group %}
+  {% if content.quotes.size > 1 %}
+    <div class="{{ c }}__rotator" hidden aria-hidden="true">
+      {% for item in content.quotes %}
+        <span class="{{ c }}__rotator__quote" data-quote="{{ item.quote | escape }}" data-author="{{ item.author_name | escape }}"></span>
+      {% endfor %}
+    </div>
+  {% endif %}
 </section>

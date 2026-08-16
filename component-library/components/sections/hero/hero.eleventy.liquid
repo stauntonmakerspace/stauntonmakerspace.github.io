@@ -1,6 +1,8 @@
 {% assign_local c = "c-hero" %}
 <section class="{{ c }} component component--{{ styles.color_group }} {% if styles.image_alignment =='left' %}{{ c }}--left-right-variant {{ c }}--image-left{% elsif styles.image_alignment =='right' %}{{ c }}--left-right-variant {{ c }}--image-right{% endif %} ">
-    {% if content.image.image_path %}
+    {% if content.video.video_url %}
+        {% bookshop "generic/video" bind:content.video %}
+    {% elsif content.image.image_path %}
         {% bookshop "generic/image" bind:content.image %}
     {% endif %}
     <div class="{{ c }}__cover"></div>

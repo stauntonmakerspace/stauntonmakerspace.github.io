@@ -1,6 +1,7 @@
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import "./form-validation";
 import "./gallery";
+import "./testimonial-carousel";
 import "./leaflet";
 import "./map"
 

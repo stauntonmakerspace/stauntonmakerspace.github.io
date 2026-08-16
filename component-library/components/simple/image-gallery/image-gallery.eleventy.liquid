@@ -5,13 +5,13 @@
         {% endif %}
         <div class="c-gallery__tiles">
             {% for image in images %}
-                <div class="c-gallery__tiles__tile">{% bookshop "generic/image" bind:image %}</div>
+                <div class="c-gallery__tiles__tile" title="{{ image.image_alt }}">{% bookshop "generic/image" bind:image %}</div>
             {% endfor %}
         </div>
     {% else %}
         <div class="c-gallery__tiles">
             {% for image in images %}
-                <div class="c-gallery__tiles__tile c-gallery__tiles__tile--hidden">{% bookshop "generic/image" bind:image %}</div>
+                <div class="c-gallery__tiles__tile c-gallery__tiles__tile--hidden" title="{{ image.image_alt }}">{% bookshop "generic/image" bind:image %}</div>
             {% endfor %}
         </div>
     {% endif %}

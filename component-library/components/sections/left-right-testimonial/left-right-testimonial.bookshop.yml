@@ -12,8 +12,9 @@ blueprint:
   content:
     id:
     eyebrow_headline: What your customers say
-    quote: Their customer service is second to none.
-    author_name: John Smith
+    quotes:
+      - quote: Their customer service is second to none.
+        author_name: John Smith
     buttons: [bookshop:generic/button]
     image: bookshop:generic/image!
   styles:
@@ -24,8 +25,9 @@ blueprint:
 preview:
   content:
     eyebrow_headline: What your customers say
-    quote: "Their customer service is second to none."
-    author_name: John Smith
+    quotes:
+      - quote: "Their customer service is second to none."
+        author_name: John Smith
     buttons:
       - _bookshop_name: generic/button
         url: "#"
@@ -45,3 +47,5 @@ preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
+  quotes:
+    comment: "The first quote is shown on page load. If more than one quote is provided, they auto-rotate every few seconds."

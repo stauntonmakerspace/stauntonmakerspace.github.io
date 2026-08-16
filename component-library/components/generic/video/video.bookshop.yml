@@ -25,12 +25,13 @@ preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  video_source: 
-    type: select 
+  video_source:
+    type: select
     options:
       values:
         - "YouTube"
         - "Vimeo"
+        - "Cloudflare Stream"
   video_url: 
     type: url 
   image_path: 

@@ -8,7 +8,7 @@ To run the website locally and make changes you will need to have NPM installed.
 Once installed, simploy run 
 
 ```bash
-npm -i
+npm i
 npm run start
 ```
 then visit http://localhost:8080/

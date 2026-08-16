@@ -22,6 +22,33 @@
     object-fit: cover;
     object-position: 50% 50%;
   }
+  // A video used as the hero's full-bleed background.
+  // iframes don't honor object-fit, so the box itself is sized to the
+  // video's aspect ratio (16:9) and overflow-cropped to cover the hero.
+  & .c-video__video-aspect-wrapper {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  & .c-video__video {
+    height: 100%;
+    padding-bottom: 0;
+
+    iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100vw;
+      height: 56.25vw; // 100 * (9 / 16)
+      min-width: 177.78vh; // 100 * (16 / 9)
+      min-height: 100vh;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+  }
   &__content {
     z-index:1;
     display: grid;
@@ -29,6 +56,10 @@
     grid-row: 1 / -1;
     grid-column: 2 / -2;
     align-self: center;
+    .c-heading,
+    .c-text-block {
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+    }
     .c-heading__primary_heading {
       text-wrap: pretty;
       max-width: 20ch;
