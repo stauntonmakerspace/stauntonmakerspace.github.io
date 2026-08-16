@@ -6,8 +6,12 @@
     align-items: center;
     text-align: center;
 
-    &__heading, &__asset {
+    &__heading, &__asset, &__caption {
         grid-column: 2 / -2;
+    }
+
+    &__caption {
+        opacity: 0.75;
     }
 
     &__button {
@@ -26,6 +30,14 @@
 
         &__asset {
             grid-column: 3 / -3;
+        }
+
+        &__caption {
+            grid-column: 4 / -4;
+
+            .c-text-block {
+                max-width: 36rem;
+            }
         }
     }
 }

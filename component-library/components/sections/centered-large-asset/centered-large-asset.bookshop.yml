@@ -11,8 +11,8 @@ spec:
 blueprint:
   content:
     id:
-    heading: bookshop:generic/heading!
-    description: Description text to compliment the block
+    heading: bookshop:generic/heading
+    description: Caption text shown below the asset
     asset: bookshop:structure:asset_blocks
     button: bookshop:generic/button
   styles:
@@ -33,3 +33,5 @@ preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
+  description:
+    comment: "Shown as a caption below the asset, not a heading."

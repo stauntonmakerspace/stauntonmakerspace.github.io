@@ -987,8 +987,11 @@
   text-align: center;
   /* Desktop view */
 }
-.c-centered-large-asset__heading, .c-centered-large-asset__asset {
+.c-centered-large-asset__heading, .c-centered-large-asset__asset, .c-centered-large-asset__caption {
   grid-column: 2/-2;
+}
+.c-centered-large-asset__caption {
+  opacity: 0.75;
 }
 .c-centered-large-asset__button {
   grid-column: 2/-2;
@@ -1002,6 +1005,12 @@
   }
   .c-centered-large-asset__asset {
     grid-column: 3/-3;
+  }
+  .c-centered-large-asset__caption {
+    grid-column: 4/-4;
+  }
+  .c-centered-large-asset__caption .c-text-block {
+    max-width: 36rem;
   }
 }
 
